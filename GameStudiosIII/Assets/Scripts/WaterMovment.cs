@@ -8,7 +8,6 @@ public class WaterMovment : MonoBehaviour
     public float speedY = 0.1f;
     private float currX;
     private float currY;
-    private bool invert = false;
     // Start is called before the first frame update
     void Start()
     {
