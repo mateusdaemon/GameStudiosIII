@@ -8,6 +8,7 @@ public class Shooter : MonoBehaviour
     public Bullet redBullet;
     public Bullet greenBullet;
     public Bullet blueBullet;
+    public Bullet neutralBullet;
     public LayerMask layerClick;
     private Camera cam;
     // Start is called before the first frame update
@@ -44,6 +45,9 @@ public class Shooter : MonoBehaviour
                     break;
                 case SpellbookMng.Spellbook.Blue:
                     currBullet = Instantiate(blueBullet, this.transform.position, new Quaternion());
+                    break;
+                case SpellbookMng.Spellbook.None:
+                    currBullet = Instantiate(neutralBullet, this.transform.position, new Quaternion());
                     break;
                 default:
                     break;

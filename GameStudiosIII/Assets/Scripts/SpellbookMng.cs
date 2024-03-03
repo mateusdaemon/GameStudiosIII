@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class SpellbookMng : MonoBehaviour
 {
-    public enum Spellbook {Red, Green, Blue};
+    public enum Spellbook {None, Red, Green, Blue};
     public Spellbook currSpellbook;
+
     // Start is called before the first frame update
     void Start()
     {
-        currSpellbook = Spellbook.Red;
+        currSpellbook = Spellbook.None;
     }
 
     // Update is called once per frame
@@ -26,6 +27,9 @@ public class SpellbookMng : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             currSpellbook = Spellbook.Blue;
+        } else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            currSpellbook = Spellbook.None;
         }
     }
 }
